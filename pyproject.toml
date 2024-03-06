@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "moepy"
+authors = [
+    {name = "Ryan Priore", email = "rpriore@thorlabs.com"},
+    {name = "Heath Smith", email = "hsmith@thorlabs.com"},
+]
+description = "Multivariate optical element design."
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["multivariate", "optical", "computing", "optimization", "filters"]
+license = {text = "Not Licensed"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    'matplotlib',
+    'numpy',
+    'plotly',
+    'ipython',
+    'pandas',
+    'gym',
+    'pyodbc',
+    'jupyter',
+    'tensorflow',
+    'termcolor',
+    'mpi4py',
+    'openpyxl',
+    'pyopencl',
+    'kaleido',
+    'scipy',
+    'tff-lib @ git+https://ThorlabsSpectralWorks@dev.azure.com/ThorlabsSpectralWorks/Python%20Packages/_git/tff-lib',
+    'tqdm'
+]
+dynamic = ["version"]
+
+[project.scripts]
+moepy-run = "moepy.run:main"
+
+[project.urls]
+homepage = "https://ThorlabsSpectralWorks@dev.azure.com/ThorlabsSpectralWorks/Python%20Packages/_git/moepy"
+
+# setuptools specific settings
+[tool.setuptools]
+zip-safe = false
+packages = ["moepy"]
+
+# ... other project metadata fields as specified in:
+#     https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
+#
+
